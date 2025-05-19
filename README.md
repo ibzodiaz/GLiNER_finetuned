@@ -3,15 +3,6 @@ This repository contains the code and experiments for evaluating an open-schema 
 
 We focus on evaluating and fine-tuning an open-schema NER model on French-language articles related to a specialized domain. The study assesses the effect of different segmentation strategies on model performance, particularly for long and heterogeneous documents.
 
-📌 Open-Schema NER
-The notebook Gliner_model.ipynb provided in this repository includes two main phases:
-
-Zero-shot evaluation
-The model (GLiNER) is first evaluated without any fine-tuning using a sliding window segmentation strategy with a 10% overlap. This allows us to assess its out-of-the-box performance on the annotated test set.
-
-Supervised fine-tuning
-The same model is then fine-tuned on the training portion of the dataset (after applying the same sliding window strategy), and re-evaluated on the test set. Only a subset of the model’s layers were updated during training, to avoid overfitting on limited annotated data.
-
 🧪 Segmentation Strategies
 The notebook Segmentation_strategies.ipynb provided in this repository evaluate the following segmentation strategies:
 
@@ -51,6 +42,16 @@ Applies each segmentation strategy.
 Runs the model on the segmented data.
 
 Filters irrelevant types and computes key metrics: TP, FP, FN, precision, recall, F1-score.
+
+📌 Open-Schema NER
+The notebook Gliner_model.ipynb provided in this repository includes two main phases:
+
+Zero-shot evaluation
+The model (GLiNER) is first evaluated without any fine-tuning using a sliding window segmentation strategy with a 10% overlap. This allows us to assess its out-of-the-box performance on the annotated test set.
+
+Supervised fine-tuning
+The same model is then fine-tuned on the training portion of the dataset (after applying the same sliding window strategy), and re-evaluated on the test set. Only a subset of the model’s layers were updated during training, to avoid overfitting on limited annotated data.
+
 
 Selects the best strategy by minimizing the sum of FP + FN.
 
