@@ -5,7 +5,7 @@ We focus on evaluating and fine-tuning an open-schema NER model on French-langua
 
 🧪 Segmentation Strategies 
 
-I didn't have time to fully anonymize this section, so I haven't deployed it in the current version. I will make this modification later. The Segmentation_strategies.ipynb notebook provided in this repository evaluates the following segmentation strategies:
+For this section, there are parts that cannot be anonymized, so I'm putting it under reserve. It will be deployed if the paper is accepted. But here is roughly what is in the code of this section:
 
 1. **Thematic Segmentation + Passage Retrieval**
    - The document is first split into coherent thematic segments using a dynamic segmentation algorithm.
